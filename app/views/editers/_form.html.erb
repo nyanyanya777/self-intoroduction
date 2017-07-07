@@ -1,0 +1,37 @@
+
+<%= form_for(@editer) do |f| %>
+<form class="form-horizontal">
+  <div class="row">
+  <div class="form-group">
+    <div class="col-sm-3" >
+      <%= f.label :タイトル %>
+    </div>
+      <div class="col-sm-9">
+        <%= f.text_field :title, class:"form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-3" >
+        <%= f.label :説明 %>
+      </div>
+        <div class="col-sm-9">
+          <%= f.text_field :description, class:"form-control" %>
+        </div>
+    </div>
+      <div class="form-group">
+        <div class="col-sm-3" >
+          <%= f.label :解説 %>
+        </div>
+          <div class="col-sm-9">
+            <%= f.text_field :content, class:"form-control input-xxlg"  %>
+          </div>
+      </div>
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-1 text-right">
+    <%= f.submit '投稿', class: 'btn btn-primary btn-block' %>
+    </div>
+  </div>
+<% end %>
+</div>
+</div>
+</form>
