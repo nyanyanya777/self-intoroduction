@@ -11,7 +11,14 @@ class EngineersController < ApplicationController
   end
 
   def create
-    @engineer = Engineer.create(engineers_params)
+    @engineer = Engineer.new(engineers_params)
+
+    if @engineer.save
+      redirect_to engineers_path
+
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -34,7 +41,7 @@ class EngineersController < ApplicationController
 
   private
   def engineers_params
-    params.require(:engineer).permit(:title, :description, :content)
+    params.require(:engineer).permit(:title, :description, :content, :image)
   end
 
   def set_engineer

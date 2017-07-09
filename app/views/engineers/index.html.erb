@@ -1,2 +1,10 @@
-<h1>Engineer#index</h1>
-<p>Find me in app/views/engineer/index.html.erb</p>
+<h1>As engineer's Work</h1>
+<div class='container'>
+  <div class='row'>
+<% @engineers.each do |engineer| %>
+  <%= image_tag engineer.image(:medium) %>
+  <h2><%= engineer.title %></h2>
+  <%= engineer.description  %>
+<% end %>
+  </div>
+</div>
