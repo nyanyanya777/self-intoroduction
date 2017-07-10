@@ -1,9 +1,19 @@
-<h1>As Editer's Work</h1>
-
-<% @editers.each do |editer| %>
-  <%= editer.title %>
-  <%= editer.description  %>
-  <%= image_tag(editer.image) %>
-  <%= image_tag(editer.image) %>
-
-<% end %>
+<div class="container">
+  <h1>As Editer's Work</h1>
+  <div class="row">
+    <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+      <% @editers.each do |editer| %>
+      <div class="kiji">
+        <p><%= image_tag editer.image(:thumb) %></p>
+        <div class="mike">
+          <p>
+            <h2><%= link_to editer.title, editer_path(editer) %></h2>
+          </p>
+          <%= editer.description %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>

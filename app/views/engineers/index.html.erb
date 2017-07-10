@@ -1,10 +1,17 @@
-<h1>As engineer's Work</h1>
-<div class='container'>
-  <div class='row'>
-<% @engineers.each do |engineer| %>
-  <%= image_tag engineer.image(:medium) %>
-  <h2><%= engineer.title %></h2>
-  <%= engineer.description  %>
-<% end %>
+<div class="container">
+  <h1>As Editer's Work</h1>
+  <div class="row">
+    <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+      <% @enginners.each do |enginner| %>
+      <div class="kiji">
+        <p><%= image_tag enginner.image(:thumb) %></p>
+        <div class="mike">
+        <p><h2><%= enginner.title %></h2></p>
+        <%= enginner.description %>
+      </div>
+      </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

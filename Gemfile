@@ -59,3 +59,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'devise-bootstrap-views'
   gem 'paperclip'
   gem 'mini_magick'
+  gem 'rails_admin'
+  gem 'cancan'
+  gem 'flexbox-rails'

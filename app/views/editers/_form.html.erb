@@ -22,12 +22,13 @@
         <%= f.label :解説 %>
       </div>
       <div class="col-sm-9">
-        <%= f.text_field :content, class:"form-control input-xxlg"  %>
+        <%= f.text_area :content, class:"form-control"  %>
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-offset-3 col-sm-1 text-right">
-      <%= f.file_field :image , multiple: true%>
+      <%= f.file_field :image %>
+      <%= f.file_field :image %>
 
       </br>
       <%= f.submit '投稿', class: 'btn btn-primary btn-block' %>
