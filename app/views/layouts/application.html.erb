@@ -3,25 +3,13 @@
   <head>
     <title>Introduction</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header class="navbar navbar-inverse">
-      <div class="container">
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "トップ", root_path %></li>
-            <li><%= link_to "編集", editers_path %></li>
-            <li><%= link_to "プログラミング", engineers_path %></li>
-            <li><%= link_to "その他", others_path %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+      <%= render 'layouts/header' %>
     <%= yield %>
-
+</div>
   </body>
 </html>
