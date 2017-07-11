@@ -1,5 +1,5 @@
 class EngineersController < ApplicationController
-
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_other, only: [:show, :update, :delete, :edit]
 
   def index

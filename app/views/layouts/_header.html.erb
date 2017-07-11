@@ -6,6 +6,9 @@
         <li><%= link_to "編集", editers_path %></li>
         <li><%= link_to "プログラミング", engineers_path %></li>
         <li><%= link_to "その他", others_path %></li>
+        <% if user_signed_in? %>
+        <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></li>
+        <% end %>
       </ul>
     </nav>
   </div>
