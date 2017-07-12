@@ -3,7 +3,7 @@ class OthersController < ApplicationController
   before_action :set_others, only: [:edit, :delete, :show, :edit]
 
   def index
-    @other = Other.all
+    @others = Other.all
   end
 
   def new
@@ -12,6 +12,12 @@ class OthersController < ApplicationController
 
   def create
     @other = Other.create(others_params)
+
+    if @other.save
+      redirect_to others_path
+    else
+      render 'new'
+    end     
   end
 
   def show
@@ -34,7 +40,7 @@ class OthersController < ApplicationController
 
   private
   def others_params
-    params.require(:other).permit(:title, :content, :description)
+    params.require(:other).permit(:title, :content, :description, :site, :image)
   end
 
   def set_others

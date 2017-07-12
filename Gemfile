@@ -46,9 +46,15 @@ group :development do
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'bullet'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'pry-rails'
+  gem 'capistrano', '3.6.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -62,3 +68,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'rails_admin'
   gem 'cancan'
   gem 'flexbox-rails'
+  gem 'rb-readline'
+  gem 'unicorn'
+  gem 'therubyracer', platforms: :ruby

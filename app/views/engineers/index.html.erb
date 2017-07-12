@@ -1,13 +1,14 @@
 <div class="container">
   <h1>As Editer's Work</h1>
+  <%= link_to '作成', new_engineer_path %>
   <div class="row">
     <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
-      <% @engineers.each do |enginner| %>
+      <% @engineers.each do |engineer| %>
       <div class="kiji">
-        <p><%= image_tag enginner.image(:thumb) %></p>
+        <p><%= image_tag engineer.image(:thumb) %></p>
         <div class="mike">
-        <p><h2><%= enginner.title %></h2></p>
-        <%= enginner.description %>
+        <h2><%= link_to engineer.title, engineer_path(engineer) %></h2>
+        <%= engineer.description %>
       </div>
       </div>
         <% end %>

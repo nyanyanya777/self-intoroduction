@@ -44,6 +44,6 @@ end
   end
 
   def editer_params
-    params.require(:editer).permit(:title, :content, :description, :image)
+    params.require(:editer).permit(:title, :content, :description, :image, :site)
   end
 end

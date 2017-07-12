@@ -2,14 +2,22 @@
   <div class="container">
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "トップ", root_path %></li>
-        <li><%= link_to "編集", editers_path %></li>
-        <li><%= link_to "プログラミング", engineers_path %></li>
-        <li><%= link_to "その他", others_path %></li>
-        <% if user_signed_in? %>
-        <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></li>
-        <% end %>
-      </ul>
-    </nav>
-  </div>
-</header>
+        <div class="navbar-header">
+          <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse target">
+            <ul class="nav navbar-nav">
+              <li><%= link_to "トップ", root_path %></li>
+              <li><%= link_to "編集", editers_path %></li>
+              <li><%= link_to "プログラミング", engineers_path %></li>
+              <li><%= link_to "その他", others_path %></li>
+              <% if user_signed_in? %>
+              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+              <% end %>
+            </ul>
+          </nav>
+        </div>
+      </header>

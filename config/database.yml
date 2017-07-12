@@ -80,6 +80,9 @@ test:
 #
 production:
   <<: *default
-  database: introduction_production
-  username: introduction
-  password: <%= ENV['INTRODUCTION_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  database: naitodb
+  username: postgres
+  password: amA9ycPnjc
+  host: localhost
+  encoding: utf8

@@ -1,6 +1,6 @@
 class Engineer < ApplicationRecord
-    has_attached_file :image,
-  styles: { medium: "240x161>", thumb: "240x161>" },
+  has_attached_file :image,
+  styles: { medium: "655x435", thumb: "200x121"},
   path: "#{Rails.root}/public/system/:class/image/:id.:style.:extension",
   url: "/system/:class/image/:id.:style.:extension"
 

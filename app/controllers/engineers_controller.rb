@@ -1,6 +1,6 @@
 class EngineersController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_other, only: [:show, :update, :delete, :edit]
+  before_action :set_engineer, only: [:show, :update, :delete, :edit]
 
   def index
     @engineers = Engineer.all
@@ -41,7 +41,7 @@ class EngineersController < ApplicationController
 
   private
   def engineers_params
-    params.require(:engineer).permit(:title, :description, :content, :image)
+    params.require(:engineer).permit(:title, :description, :content, :image, :site)
   end
 
   def set_engineer

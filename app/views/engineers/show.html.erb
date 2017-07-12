@@ -1,2 +1,25 @@
-<h1>Engineer#show</h1>
-<p>Find me in app/views/engineer/show.html.erb</p>
+<div class="container">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <div class="text-center">
+      <h1><%= @engineer.title %></h1>
+      <p><%= image_tag @engineer.image(:medium) %></p>
+    </div>
+    <div class="text-center">
+      <h3>概要</h3>
+    </div>
+    <div class="text-left">
+      <%== @engineer.description %>
+    </div>
+    <div class="text-center">
+      <h3>感想など</h3>
+    </div>
+    <div class="text-left">
+      <%== @engineer.content %>
+    </br>
+      <h4>参考サイト</h4>
+      <%= link_to @engineer.site, @engineer.site, :target => "_blank" %>
+    </div>
+  </div>
+<div class="col-sm-3"></div>
+</div>

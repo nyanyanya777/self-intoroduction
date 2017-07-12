@@ -1,2 +1,25 @@
-<h1>Other#show</h1>
-<p>Find me in app/views/other/show.html.erb</p>
+<div class="container">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <div class="text-center">
+      <h1><%= @other.title %></h1>
+      <p><%= image_tag @other.image(:medium) %></p>
+    </div>
+    <div class="text-center">
+      <h3>概要</h3>
+    </div>
+    <div class="text-left">
+      <%== @other.description %>
+    </div>
+    <div class="text-center">
+      <h3>個人的解説</h3>
+    </div>
+    <div class="text-left">
+      <%== @other.content %>
+    </br>
+      <h4>参考サイト</h4>
+      <%= link_to @other.site, @other.site, :target => "_blank" %>
+    </div>
+  </div>
+<div class="col-sm-3"></div>
+</div>

@@ -5,10 +5,21 @@
       <h1><%= @editer.title %></h1>
       <p><%= image_tag @editer.image(:medium) %></p>
     </div>
-<div class="text-left">
+    <div class="text-center">
+      <h3>企画内容</h3>
+    </div>
+    <div class="text-left">
+      <%== @editer.description %>
+    </div>
+    <div class="text-center">
+      <h3>個人的解説</h3>
+    </div>
+    <div class="text-left">
       <%== @editer.content %>
+    </br>
+      <h4>参考サイト</h4>
+      <%= link_to @editer.site, @editer.site, :target => "_blank" %>
     </div>
   </div>
-    <div class="col-sm-3"></div>
-  </div>
+<div class="col-sm-3"></div>
 </div>
